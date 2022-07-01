@@ -1,0 +1,10 @@
+{
+  "name": "repack-examples",
+  "packageManager": "yarn@3.2.1",
+  "workspaces": [
+    "local-chunks"
+  ],
+  "resolutions": {
+    "@types/react": "^18"
+  }
+}
