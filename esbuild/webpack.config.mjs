@@ -1,7 +1,6 @@
 import path from 'path';
-import TerserPlugin from 'terser-webpack-plugin';
 import * as Repack from '@callstack/repack';
-import appConfig from './app.json' assert {type: 'json'};
+import {ESBuildMinifyPlugin} from 'esbuild-loader';
 
 /**
  * More documentation, installation, usage, motivation and differences with Metro is available at:
@@ -19,7 +18,7 @@ import appConfig from './app.json' assert {type: 'json'};
  *            when running with `react-native start/bundle`.
  */
 export default env => {
-  const {
+  let {
     mode = 'development',
     context = Repack.getDirname(import.meta.url),
     entry = './index.js',
@@ -107,19 +106,8 @@ export default env => {
       minimize,
       /** Configure minimizer to process the bundle. */
       minimizer: [
-        new TerserPlugin({
-          test: /\.(js)?bundle(\?.*)?$/i,
-          /**
-           * Prevents emitting text file with comments, licenses etc.
-           * If you want to gather in-file licenses, feel free to remove this line or configure it
-           * differently.
-           */
-          extractComments: false,
-          terserOptions: {
-            format: {
-              comments: false,
-            },
-          },
+        new ESBuildMinifyPlugin({
+          target: 'es2015',
         }),
       ],
       chunkIds: 'named',
@@ -137,8 +125,14 @@ export default env => {
         {
           test: /\.[jt]sx?$/,
           include: [
-            /node_modules(.*[/\\])+react/,
+            /node_modules(.*[/\\])+react-native/,
             /node_modules(.*[/\\])+@react-native/,
+          ],
+          use: 'babel-loader',
+        },
+        {
+          test: /\.[jt]sx?$/,
+          include: [
             /node_modules(.*[/\\])+@react-navigation/,
             /node_modules(.*[/\\])+@react-native-community/,
             /node_modules(.*[/\\])+@expo/,
@@ -147,25 +141,25 @@ export default env => {
             /node_modules(.*[/\\])+abort-controller/,
             /node_modules(.*[/\\])+@callstack\/repack/,
           ],
-          use: 'babel-loader',
+          use: {
+            loader: 'esbuild-loader',
+            options: {
+              loader: 'tsx',
+              target: 'es2015',
+            },
+          },
         },
         /**
          * Here you can adjust loader that will process your files.
-         *
-         * You can also enable persistent caching with `cacheDirectory` - please refer to:
-         * https://github.com/babel/babel-loader#options
          */
         {
           test: /\.[jt]sx?$/,
           exclude: /node_modules/,
           use: {
-            loader: 'babel-loader',
+            loader: 'esbuild-loader',
             options: {
-              /** Add React Refresh transform only when HMR is enabled. */
-              plugins:
-                devServer && devServer.hmr
-                  ? ['module:react-refresh/babel']
-                  : undefined,
+              loader: 'tsx',
+              target: 'es2015',
             },
           },
         },
@@ -217,17 +211,6 @@ export default env => {
           sourceMapFilename,
           assetsPath,
         },
-        extraChunks: [
-          {
-            include: appConfig.localChunks,
-            type: 'local',
-          },
-          {
-            exclude: appConfig.localChunks,
-            type: 'remote',
-            outputPath: path.join('build/output', platform, 'remote'),
-          },
-        ],
       }),
     ],
   };

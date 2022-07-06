@@ -2,6 +2,7 @@
   "name": "repack-examples",
   "packageManager": "yarn@3.2.1",
   "workspaces": [
+    "esbuild",
     "local-chunks"
   ],
   "resolutions": {
