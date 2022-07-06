@@ -139,7 +139,6 @@ export default env => {
             /node_modules(.*[/\\])+pretty-format/,
             /node_modules(.*[/\\])+metro/,
             /node_modules(.*[/\\])+abort-controller/,
-            /node_modules(.*[/\\])+@callstack\/repack/,
           ],
           use: {
             loader: 'esbuild-loader',
