@@ -1,0 +1,33 @@
+{
+  "name": "host",
+  "version": "0.0.1",
+  "private": true,
+  "installConfig": {
+    "hoistingLimits": "workspaces"
+  },
+  "scripts": {
+    "android": "react-native run-android --no-packager",
+    "ios": "react-native run-ios --no-packager",
+    "start": "react-native webpack-start"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-native": "0.68.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@callstack/eslint-config": "^12.0.2",
+    "@callstack/repack": "next",
+    "@types/react-native": "^0.67.3",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.18.0",
+    "metro-react-native-babel-preset": "^0.67.0",
+    "terser-webpack-plugin": "^5.3.3",
+    "typescript": "^4.4.4",
+    "webpack": "^5.73.0"
+  },
+  "resolutions": {
+    "@types/react": "^17"
+  }
+}

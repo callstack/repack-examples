@@ -4,6 +4,7 @@
   "workspaces": [
     "esbuild",
     "local-chunks",
+    "module-federation",
     "swc"
   ],
   "resolutions": {

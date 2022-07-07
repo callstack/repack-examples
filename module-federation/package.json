@@ -1,0 +1,19 @@
+{
+  "name": "module-federation",
+  "workspaces": [
+    "app1",
+    "app2",
+    "host",
+    "module1"
+  ],
+  "scripts": {
+    "start:host": "yarn workspace host run start",
+    "start:app1": "yarn workspace app1 run start",
+    "start:app2": "yarn workspace app2 run start",
+    "start:module1": "yarn workspace module1 run start",
+    "start": "concurrently 'yarn:start:*'"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.2"
+  }
+}
