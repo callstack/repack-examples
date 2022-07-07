@@ -249,6 +249,9 @@ export default (env) => {
             requiredVersion: '0.68.2',
           },
         },
+        remotes: {
+          app1: Repack.Federated.createRemote('app1'),
+        },
       }),
     ],
   };
