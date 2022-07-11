@@ -12,27 +12,25 @@ const resolveURL = Federated.createURLResolver({
   },
 });
 
-new ScriptManager({
-  resolve: async (scriptId, caller) => {
-    let url;
-    if (caller === 'main') {
-      url = Script.getDevServerURL(scriptId);
-    } else {
-      url = resolveURL(scriptId, caller);
-    }
+ScriptManager.shared.addResolver(async (scriptId, caller) => {
+  let url;
+  if (caller === 'main') {
+    url = Script.getDevServerURL(scriptId);
+  } else {
+    url = resolveURL(scriptId, caller);
+  }
 
-    if (!url) {
-      throw new Error(`No url for ${scriptId} called by ${caller}`);
-    }
+  if (!url) {
+    return undefined;
+  }
 
-    return {
-      url,
-      cache: false, // For development
-      query: {
-        platform: Platform.OS,
-      },
-    };
-  },
+  return {
+    url,
+    cache: false, // For development
+    query: {
+      platform: Platform.OS,
+    },
+  };
 });
 
 AppRegistry.registerComponent(appName, () => App);
