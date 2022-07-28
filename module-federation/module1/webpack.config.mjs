@@ -245,7 +245,8 @@ export default (env) => {
           type: 'self',
         },
         exposes: {
-          './Root.js': './src/Root.tsx',
+          './Root': './src/Root.tsx',
+          './baz': './src/baz.ts',
         },
         shared: {
           react: {
@@ -257,6 +258,9 @@ export default (env) => {
             eager: STANDALONE, // to be figured out
             requiredVersion: '0.68.2',
           },
+        },
+        remotes: {
+          app1: Repack.Federated.createRemote('app1'),
         },
       }),
     ],

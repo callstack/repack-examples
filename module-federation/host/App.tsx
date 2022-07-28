@@ -3,8 +3,8 @@ import { Federated } from '@callstack/repack/client';
 import React from 'react';
 import { Text, SafeAreaView } from 'react-native';
 
-const App1 = React.lazy(() => Federated.importModule('app1', './App.js'));
-const App2 = React.lazy(() => Federated.importModule('app2', './App.js'));
+const App1 = React.lazy(() => Federated.importModule('app1', './App'));
+const App2 = React.lazy(() => Federated.importModule('app2', './App'));
 
 export default function App() {
   return (

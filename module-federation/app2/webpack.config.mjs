@@ -245,7 +245,7 @@ export default (env) => {
           type: 'self',
         },
         exposes: {
-          './App.js': './src/App.tsx',
+          './App': './src/App.tsx',
         },
         shared: {
           react: {

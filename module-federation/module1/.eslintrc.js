@@ -4,6 +4,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
   },
+  rules: {
+    'react-native/no-raw-text': 0,
+  },
   overrides: [
     {
       files: ['*.config.{js,mjs,cjs}'],
