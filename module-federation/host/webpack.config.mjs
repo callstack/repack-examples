@@ -1,7 +1,6 @@
 import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
 import * as Repack from '@callstack/repack';
-import webpack from 'webpack';
 
 /**
  * More documentation, installation, usage, motivation and differences with Metro is available at:
@@ -235,7 +234,7 @@ export default (env) => {
         },
       }),
 
-      new webpack.container.ModuleFederationPlugin({
+      new Repack.plugins.ModuleFederationPlugin({
         name: 'host',
         shared: {
           react: {

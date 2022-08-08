@@ -1,7 +1,6 @@
 import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
 import * as Repack from '@callstack/repack';
-import webpack from 'webpack';
 
 const STANDALONE = Boolean(process.env.STANDALONE);
 
@@ -237,7 +236,7 @@ export default (env) => {
         },
       }),
 
-      new webpack.container.ModuleFederationPlugin({
+      new Repack.plugins.ModuleFederationPlugin({
         name: 'module1',
         filename: 'module1.container.bundle',
         library: {
@@ -260,7 +259,7 @@ export default (env) => {
           },
         },
         remotes: {
-          app1: Repack.Federated.createRemote('app1'),
+          app1: 'app1@dynamic',
         },
       }),
     ],
