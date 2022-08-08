@@ -1163,9 +1163,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@callstack/repack@file:./repack-3.0.0-next.6-884e614-4.tgz::locator=repack-examples%40workspace%3A.":
-  version: 3.0.0-next.6
-  resolution: "@callstack/repack@file:./repack-3.0.0-next.6-884e614-4.tgz::locator=repack-examples%40workspace%3A."
+"@callstack/repack@npm:next":
+  version: 3.0.0-next.7
+  resolution: "@callstack/repack@npm:3.0.0-next.7"
   dependencies:
     "@callstack/repack-dev-server": ^1.0.0-next.2
     "@pmmmwh/react-refresh-webpack-plugin": ^0.5.7
@@ -1193,7 +1193,7 @@ __metadata:
     "@react-native-community/cli-types": "*"
     react-native: ">=0.63"
     webpack: 5.x
-  checksum: f063d01134152f685a8604005f153599efaa33ab6659313ca06cc713fc32cce904886ce22673785d43277e5a01ca97a26320d9367e63adbf9a81ca6ebea76566
+  checksum: b60af3dd88bd0600d48a3ba002d4e1f712919310a7946e7834c1b09ebefbc6439828781f20aa24a38294a4d3689b0326f6352e3f4925a8a958a5d863313b223e
   languageName: node
   linkType: hard
 

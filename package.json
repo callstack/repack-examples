@@ -8,7 +8,6 @@
     "swc"
   ],
   "resolutions": {
-    "@types/react": "^18",
-    "@callstack/repack": "file:./repack-3.0.0-next.6-884e614-4.tgz"
+    "@types/react": "^18"
   }
 }
