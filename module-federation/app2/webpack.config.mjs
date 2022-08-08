@@ -238,21 +238,16 @@ export default (env) => {
 
       new Repack.plugins.ModuleFederationPlugin({
         name: 'app2',
-        filename: `app2.container.bundle`,
-        library: {
-          name: 'app2',
-          type: 'self',
-        },
         exposes: {
           './App': './src/App.tsx',
         },
         shared: {
           react: {
-            singleton: true,
+            ...Repack.Federated.SHARED_REACT,
             eager: STANDALONE, // to be figured out
           },
           'react-native': {
-            singleton: true,
+            ...Repack.Federated.SHARED_REACT_NATIVE,
             eager: STANDALONE, // to be figured out
             requiredVersion: '0.68.2',
           },

@@ -238,13 +238,11 @@ export default (env) => {
         name: 'host',
         shared: {
           react: {
-            singleton: true,
-            eager: true,
+            ...Repack.Federated.SHARED_REACT,
             requiredVersion: '17.0.2',
           },
           'react-native': {
-            singleton: true,
-            eager: true,
+            ...Repack.Federated.SHARED_REACT_NATIVE,
             requiredVersion: '0.68.2',
           },
         },
