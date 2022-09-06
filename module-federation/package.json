@@ -11,6 +11,9 @@
     "start:app1": "yarn workspace app1 run start",
     "start:app2": "yarn workspace app2 run start",
     "start:module1": "yarn workspace module1 run start",
+    "bootstrap:pods": "yarn workspaces foreach run pod_install",
+    "bootstrap": "yarn && yarn bootstrap:pods",
+    "clean": "find ./ -type d -name 'node_modules' -exec rm -rf '{}' +",
     "start": "concurrently 'yarn:start:*'"
   },
   "devDependencies": {

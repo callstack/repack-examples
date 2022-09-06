@@ -7,6 +7,9 @@
     "module-federation",
     "swc"
   ],
+  "scripts": {
+    "clean": "find ./ -type d -name 'node_modules' -exec rm -rf '{}' +"
+  },
   "resolutions": {
     "@types/react": "^18"
   }

@@ -8,6 +8,7 @@
   "scripts": {
     "android": "react-native run-android --no-packager",
     "ios": "react-native run-ios --no-packager",
+    "pod_install": "cd ./ios && pod install",
     "start": "react-native webpack-start --port 9000"
   },
   "dependencies": {
