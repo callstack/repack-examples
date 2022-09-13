@@ -39,7 +39,9 @@ export default (env) => {
     throw new Error('Missing platform');
   }
 
-  devServer.hmr = false;
+  if (devServer) {
+    devServer.hmr = false;
+  }
 
   /**
    * Depending on your Babel configuration you might want to keep it.

@@ -18,6 +18,7 @@ import * as Repack from '@callstack/repack';
  *            when running with `react-native start/bundle`.
  */
 export default (env) => {
+  console.log(env);
   const {
     mode = 'development',
     context = Repack.getDirname(import.meta.url),
@@ -37,7 +38,9 @@ export default (env) => {
     throw new Error('Missing platform');
   }
 
-  devServer.hmr = false;
+  if (devServer) {
+    devServer.hmr = false;
+  }
 
   /**
    * Depending on your Babel configuration you might want to keep it.
@@ -182,7 +185,9 @@ export default (env) => {
          */
         {
           test: Repack.getAssetExtensionsRegExp(
-            Repack.ASSET_EXTENSIONS.filter((ext) => ext !== 'svg')
+            Repack.ASSET_EXTENSIONS.filter(
+              (ext) => ext !== 'svg' && ext !== 'ico'
+            )
           ),
           use: {
             loader: '@callstack/repack/assets-loader',

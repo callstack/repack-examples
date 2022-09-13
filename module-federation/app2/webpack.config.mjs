@@ -3,7 +3,7 @@ import TerserPlugin from 'terser-webpack-plugin';
 import * as Repack from '@callstack/repack';
 
 const STANDALONE = Boolean(process.env.STANDALONE);
-
+console.log(STANDALONE);
 /**
  * More documentation, installation, usage, motivation and differences with Metro is available at:
  * https://github.com/callstack/repack/blob/main/README.md
@@ -39,7 +39,9 @@ export default (env) => {
     throw new Error('Missing platform');
   }
 
-  devServer.hmr = false;
+  if (devServer) {
+    devServer.hmr = false;
+  }
 
   /**
    * Depending on your Babel configuration you might want to keep it.

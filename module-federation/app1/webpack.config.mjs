@@ -24,7 +24,7 @@ export default (env) => {
     mode = 'development',
     context = Repack.getDirname(import.meta.url),
     entry = './index.js',
-    platform = process.env.PLATFORM,
+    platform = process.env.PLATFORM || 'android',
     minimize = mode === 'production',
     devServer = undefined,
     bundleFilename = undefined,
@@ -39,7 +39,9 @@ export default (env) => {
     throw new Error('Missing platform');
   }
 
-  devServer.hmr = false;
+  if (devServer) {
+    devServer.hmr = false;
+  }
 
   /**
    * Depending on your Babel configuration you might want to keep it.
