@@ -11,6 +11,8 @@
     "clean": "find ./ -type d -name 'node_modules' -exec rm -rf '{}' +"
   },
   "resolutions": {
-    "@types/react": "^18"
+    "@types/react": "^18",
+    "@callstack/repack": "file:./repack-3.0.0-next.7-108a081-13.tgz",
+    "@callstack/repack-dev-server": "file:./repack-dev-server-1.0.0-next.2-108a081-13.tgz"
   }
 }

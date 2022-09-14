@@ -11,9 +11,9 @@
     "start:app1": "yarn workspace app1 run start",
     "start:app2": "yarn workspace app2 run start",
     "start:module1": "yarn workspace module1 run start",
-    "standalone:app1": "yarn workspace app1 run start:standalone",
-    "standalone:app2": "yarn workspace app2 run start:standalone",
-    "standalone:module1": "yarn workspace module1 run start:standalone",
+    "start:standalone:app1": "yarn workspace app1 run start:standalone",
+    "start:standalone:app2": "yarn workspace app2 run start:standalone",
+    "start:standalone:module1": "yarn workspace module1 run start:standalone",
     "run:host:ios": "yarn workspace host run ios",
     "run:host:android": "yarn workspace host run android",
     "run:app1:ios": "yarn workspace app1 run ios",
@@ -25,7 +25,7 @@
     "bootstrap:pods": "yarn workspaces foreach run pod_install",
     "bootstrap": "yarn && yarn bootstrap:pods",
     "clean": "find ./ -type d -name 'node_modules' -exec rm -rf '{}' +",
-    "start": "concurrently 'yarn:start:*'"
+    "start": "concurrently -P 'yarn:start:*(!standalone) {1}'"
   },
   "devDependencies": {
     "concurrently": "^7.2.2"
