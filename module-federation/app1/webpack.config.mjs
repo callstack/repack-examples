@@ -39,6 +39,15 @@ export default (env) => {
     throw new Error('Missing platform');
   }
 
+  /**
+   * Using Module Federation might require disabling hmr.
+   * Uncomment below to set `devServer.hmr` to `false`.
+   *
+   * Keep in mind that `devServer` object is not available
+   * when running `webpack-bundle` command. Be sure
+   * to check its value to avoid accessing undefined value,
+   * otherwise an error might occur.
+   */
   if (devServer) {
     devServer.hmr = false;
   }
