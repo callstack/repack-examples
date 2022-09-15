@@ -8,9 +8,11 @@
   "scripts": {
     "android": "react-native run-android --no-packager",
     "ios": "react-native run-ios --no-packager",
+    "pod_install": "cd ./ios && pod install",
     "start": "react-native webpack-start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "bootstrap": "yarn && yarn pod_install"
   },
   "dependencies": {
     "react": "18.0.0",
