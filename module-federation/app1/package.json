@@ -10,7 +10,7 @@
     "ios": "react-native run-ios --no-packager",
     "pod_install": "cd ./ios && pod install",
     "start": "react-native webpack-start --port 9000",
-    "start:standalone": "react-native webpack-start --port 8081"
+    "start:standalone": "STANDALONE=1 react-native webpack-start --port 8081"
   },
   "dependencies": {
     "react": "17.0.2",
