@@ -19,7 +19,7 @@
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@callstack/eslint-config": "^12.0.2",
-    "@callstack/repack": "next",
+    "@callstack/repack": "^3.0.0",
     "@types/react-native": "^0.67.3",
     "babel-loader": "^8.2.5",
     "eslint": "^8.18.0",

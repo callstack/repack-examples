@@ -1143,19 +1143,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@callstack/repack-debugger-app@npm:^1.0.0-next.0":
-  version: 1.0.0-next.0
-  resolution: "@callstack/repack-debugger-app@npm:1.0.0-next.0"
-  checksum: 2ee7cb5f6366e8ebf71c32adde8c6a094409d2f4abbef59679ab7491c8cc0221cda8cc1581de9c0cdedf26a84fc46075f64efd31351a23cbcbb69e1c094e8d26
+"@callstack/repack-debugger-app@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@callstack/repack-debugger-app@npm:1.0.0"
+  checksum: 2274b4a912d4ba9bc624328f95edd2e25fed34595879c6186656834fff06c95256d34bf08f486d3a76cee7b89b4ca36780f77974850b324fa95d164644ecb10c
   languageName: node
   linkType: hard
 
-"@callstack/repack-dev-server@npm:^1.0.0-next.3":
-  version: 1.0.0-next.3
-  resolution: "@callstack/repack-dev-server@npm:1.0.0-next.3"
+"@callstack/repack-dev-server@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@callstack/repack-dev-server@npm:1.0.0"
   dependencies:
     "@babel/code-frame": ^7.16.7
-    "@callstack/repack-debugger-app": ^1.0.0-next.0
+    "@callstack/repack-debugger-app": ^1.0.0
     "@fastify/sensible": ^4.1.0
     "@fastify/static": ^5.0.2
     fastify: ^3.29.0
@@ -1167,15 +1167,15 @@ __metadata:
     pretty-format: ^28.1.0
     source-map: ^0.7.3
     ws: ^8.7.0
-  checksum: 362900513df3e33408e3c2e1bd877acc95c3e38e2c70ea2b34834599b703ca0cf6d51532562786933b23a6fc269523640ba72dbe61657e60e4f3f8b83c6889e8
+  checksum: ce2d6d7467d0c51174995b4b762e61bd3d430a11aabb08ed7fc585173eed9d6d4ca51bd85c14798a7cfb0db6385f8d2a070c8ca3df70a52809733e95f804bc13
   languageName: node
   linkType: hard
 
-"@callstack/repack@npm:next":
-  version: 3.0.0-next.8
-  resolution: "@callstack/repack@npm:3.0.0-next.8"
+"@callstack/repack@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@callstack/repack@npm:3.0.0"
   dependencies:
-    "@callstack/repack-dev-server": ^1.0.0-next.3
+    "@callstack/repack-dev-server": ^1.0.0
     "@pmmmwh/react-refresh-webpack-plugin": ^0.5.7
     colorette: ^1.2.2
     dedent: ^0.7.0
@@ -1201,7 +1201,7 @@ __metadata:
     "@react-native-community/cli-types": "*"
     react-native: ">=0.63"
     webpack: 5.x
-  checksum: 521018998f5a6f9d45020c562e2306ccfa2ebdbd374fe80b17a7cd8286f8fed72d3436fcc2b6f744955476bbdae24b7b6870b0f14e2dd7a56190a7e5c739ad5f
+  checksum: 091eddb87b1d037e48796419985f4ce8ddb80c3def492e3729f31f5544f8d1362d79d9f930af31e33bf0009a7cae4522a58a37db98bd8b37b7ec73a558c371f1
   languageName: node
   linkType: hard
 
@@ -3352,7 +3352,7 @@ __metadata:
     "@babel/core": ^7.12.9
     "@babel/runtime": ^7.12.5
     "@callstack/eslint-config": ^12.0.2
-    "@callstack/repack": next
+    "@callstack/repack": ^3.0.0
     "@types/react-native": ^0.67.3
     babel-loader: ^8.2.5
     eslint: ^8.18.0
@@ -3372,7 +3372,7 @@ __metadata:
     "@babel/core": ^7.12.9
     "@babel/runtime": ^7.12.5
     "@callstack/eslint-config": ^12.0.2
-    "@callstack/repack": next
+    "@callstack/repack": ^3.0.0
     "@types/react-native": ^0.67.3
     babel-loader: ^8.2.5
     eslint: ^8.18.0
@@ -5266,7 +5266,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.9
     "@babel/runtime": ^7.12.5
-    "@callstack/repack": next
+    "@callstack/repack": ^3.0.0
     "@react-native-community/eslint-config": ^2.0.0
     "@tsconfig/react-native": ^2.0.0
     "@types/jest": ^26.0.23
@@ -6761,7 +6761,7 @@ __metadata:
     "@babel/core": ^7.12.9
     "@babel/runtime": ^7.12.5
     "@callstack/eslint-config": ^12.0.2
-    "@callstack/repack": next
+    "@callstack/repack": ^3.0.0
     "@types/react-native": ^0.67.3
     babel-loader: ^8.2.5
     eslint: ^8.18.0
@@ -8420,7 +8420,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.9
     "@babel/runtime": ^7.12.5
-    "@callstack/repack": next
+    "@callstack/repack": ^3.0.0
     "@react-native-community/eslint-config": ^2.0.0
     "@tsconfig/react-native": ^2.0.0
     "@types/jest": ^26.0.23
@@ -9498,7 +9498,7 @@ __metadata:
     "@babel/core": ^7.12.9
     "@babel/runtime": ^7.12.5
     "@callstack/eslint-config": ^12.0.2
-    "@callstack/repack": next
+    "@callstack/repack": ^3.0.0
     "@types/react-native": ^0.67.3
     babel-loader: ^8.2.5
     eslint: ^8.18.0
@@ -12021,7 +12021,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.12.9
     "@babel/runtime": ^7.12.5
-    "@callstack/repack": next
+    "@callstack/repack": ^3.0.0
     "@react-native-community/eslint-config": ^2.0.0
     "@swc/core": ^1.2.210
     "@tsconfig/react-native": ^2.0.0

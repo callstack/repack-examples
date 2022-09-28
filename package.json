@@ -8,6 +8,7 @@
     "swc"
   ],
   "scripts": {
+    "bootstrap": "yarn workspaces foreach run bootstrap",
     "clean": "find ./ -type d -name 'node_modules' -exec rm -rf '{}' +"
   },
   "resolutions": {
