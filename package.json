@@ -1,6 +1,6 @@
 {
   "name": "repack-examples",
-  "packageManager": "yarn@3.2.1",
+  "packageManager": "pnpm@9.8.0",
   "workspaces": [
     "esbuild",
     "local-chunks",
