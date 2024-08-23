@@ -7,19 +7,19 @@ A repository with examples for [Re.Pack](https://github.com/callstack/repack).
 Install dependencies:
 
 ```bash
-yarn install
+pnpm install
 ```
 
 Run scripts inside desired example:
 
 ```bash
-yarn workspace <name> run start
-yarn workspace <name> run ios
-yarn workspace <name> run android
+pnpm --filter=<name> run start
+pnpm --filter=<name> run ios
+pnpm --filter=<name> run android
 ```
 
 for example:
 
 ```bash
-yarn workspace local-chunks run start
+pnpm --filter=local-chunks run start
 ```
