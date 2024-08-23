@@ -1,14 +1,8 @@
 {
   "name": "repack-examples",
   "packageManager": "pnpm@9.8.0",
-  "workspaces": [
-    "esbuild",
-    "local-chunks",
-    "module-federation",
-    "swc"
-  ],
   "scripts": {
-    "bootstrap": "yarn workspaces foreach run bootstrap",
+    "bootstrap": "pnpm -r bootstrap",
     "clean": "find ./ -type d -name 'node_modules' -exec rm -rf '{}' +"
   },
   "resolutions": {

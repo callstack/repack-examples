@@ -12,7 +12,7 @@
     "start": "react-native webpack-start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "bootstrap": "yarn && yarn pod_install"
+    "bootstrap": "pnpm install && pnpm run pod_install"
   },
   "dependencies": {
     "react": "18.0.0",
