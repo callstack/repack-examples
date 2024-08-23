@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@types/react': ^18
+  '@types/react': ^17
 
 importers:
 
@@ -1908,8 +1908,8 @@ packages:
   '@types/react-test-renderer@18.0.0':
     resolution: {integrity: sha512-C7/5FBJ3g3sqUahguGi03O79b8afNeSD6T8/GU50oQrJCU0bVCCGQHaGKUbg2Ce8VQEEqTw8/HiS6lXHHdgkdQ==}
 
-  '@types/react@18.0.20':
-    resolution: {integrity: sha512-MWul1teSPxujEHVwZl4a5HxQ9vVNsjTchVA+xRqv/VYGCuKGAU6UhfrTdF5aBefwD1BHUD8i/zq+O/vyCm/FrA==}
+  '@types/react@17.0.80':
+    resolution: {integrity: sha512-LrgHIu2lEtIo8M7d1FcI3BdwXWoRQwMoXOZ7+dPTW0lYREjmlHl3P0U1VD0i/9tppOuv8/sam7sOjx34TxSFbA==}
 
   '@types/scheduler@0.16.2':
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
@@ -6321,7 +6321,7 @@ snapshots:
       '@babel/helper-plugin-utils': 7.24.8
       debug: 4.3.4
       lodash.debounce: 4.0.8
-      resolve: 1.22.1
+      resolve: 1.22.8
     transitivePeerDependencies:
       - supports-color
 
@@ -8517,17 +8517,17 @@ snapshots:
 
   '@types/react-native@0.67.26':
     dependencies:
-      '@types/react': 18.0.20
+      '@types/react': 17.0.80
 
   '@types/react-native@0.69.9':
     dependencies:
-      '@types/react': 18.0.20
+      '@types/react': 17.0.80
 
   '@types/react-test-renderer@18.0.0':
     dependencies:
-      '@types/react': 18.0.20
+      '@types/react': 17.0.80
 
-  '@types/react@18.0.20':
+  '@types/react@17.0.80':
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2

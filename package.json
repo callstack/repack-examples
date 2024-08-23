@@ -4,7 +4,9 @@
   "scripts": {
     "pods": "pnpm -r pods"
   },
-  "resolutions": {
-    "@types/react": "^18"
+  "pnpm": {
+    "overrides": {
+      "@types/react": "^17"
+    }
   }
 }
