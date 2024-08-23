@@ -1,11 +1,5 @@
 {
   "name": "module-federation",
-  "workspaces": [
-    "app1",
-    "app2",
-    "host",
-    "module1"
-  ],
   "scripts": {
     "start:host": "pnpm --filter=host run start",
     "start:app1": "pnpm --filter=app1 run start",
@@ -22,9 +16,6 @@
     "run:app2:android": "pnpm --filter=app2 run android",
     "run:module1:ios": "pnpm --filter=module1 run ios",
     "run:module1:android": "pnpm --filter=module1 run android",
-    "bootstrap:pods": "pnpm -r run pod_install",
-    "bootstrap": "pnpm install && pnpm bootstrap:pods",
-    "clean": "find ./ -type d -name 'node_modules' -exec rm -rf '{}' +",
     "start": "concurrently -P 'pnpm:start:*(!standalone) {1}'"
   },
   "devDependencies": {

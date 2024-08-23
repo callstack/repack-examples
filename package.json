@@ -2,8 +2,7 @@
   "name": "repack-examples",
   "packageManager": "pnpm@9.8.0",
   "scripts": {
-    "bootstrap": "pnpm -r bootstrap",
-    "clean": "find ./ -type d -name 'node_modules' -exec rm -rf '{}' +"
+    "pods": "pnpm -r pods"
   },
   "resolutions": {
     "@types/react": "^18"

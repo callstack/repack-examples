@@ -6,13 +6,12 @@
     "hoistingLimits": "workspaces"
   },
   "scripts": {
+    "pods": "pnpx pod-install",
     "android": "react-native run-android --no-packager",
     "ios": "react-native run-ios --no-packager",
-    "pod_install": "cd ./ios && pod install",
     "start": "react-native webpack-start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "bootstrap": "pnpm install && pnpm run pod_install"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "react": "18.0.0",
