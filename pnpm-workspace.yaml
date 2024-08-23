@@ -2,4 +2,8 @@ packages:
   - "esbuild"
   - "local-chunks"
   - "module-federation"
+  - "module-federation/app1"
+  - "module-federation/app2"
+  - "module-federation/host"
+  - "module-federation/module1"
   - "swc"
