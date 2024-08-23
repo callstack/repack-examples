@@ -2,9 +2,6 @@
   "name": "local-chunks",
   "version": "0.0.1",
   "private": true,
-  "installConfig": {
-    "hoistingLimits": "workspaces"
-  },
   "scripts": {
     "pods": "pnpx pod-install",
     "android": "react-native run-android --no-packager",
